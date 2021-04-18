@@ -47,7 +47,8 @@ io.on('connect', (socket)=>{
         })
     
         socket.on('disconnect', () => {
-            console.log('user disconnected')
+            const user = getUser(socket.id)
+            io.emit('sendToAll',generateTime(`${user[0].username} left the chat room!`, user[0].username) )
         })
     
     })
