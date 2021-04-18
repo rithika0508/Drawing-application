@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
+    <title>Pictionary</title>
+    <link rel="stylesheet" href="css/drawing.css">
+
+</head>
+
+<body>
+    <div class="entire-bar">
+        <div id="firstbar" class="bars">
+            <p>Users</p>
+        </div>
+        
+        <div id="secondbar" class="bars">
+            <div class="messages"></div>
+
+            <form id="message-form">
+                <input name="message" id="inputMessage" type="text" placeholder="Type your message" autocomplete="off" required>
+                <button id="sendMessage" type="submit">SEND</button>
+            </form>
+        </div>
+
+        <div id="thirdbar" class="bars">
+            <div class="drawing-board" style="border: solid black 2px;">
+                <canvas id="canvas" width="565" height="565" style="border: solid black 2px;"></canvas>
+                <button class="finishdrawing-btn" onclick="finishdrawing()">Done</button>
+                <div class="finishdrawing-btn" id="clear-btn" style="border: solid 0.1px black; border-radius: 5px;">Clear</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script id="firstbar-template" type="text/html">
+        <p>{{room}}</p>
+        <ul>
+            {{#users}}
+                <li>{{user}}</li>
+            {{/users}}
+        </ul>
+    </script> -->
+
+
+
+    <script id="message-template" type="text/html">
+        <div class="username">{{username}}<span>{{time}}</span></div>
+        <div class="text-message">{{text}}</div>
+    </script>
+    <script id="drawing-template" type="text/html">
+        <div class="username">{{username}}<span>{{time}}</span></div>
+        <img id="drawing-img" src={{image_URL}} alt="loading...">
+    </script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/draw.js"> </script>
+
+</html>

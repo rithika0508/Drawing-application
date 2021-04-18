@@ -1,0 +1,97 @@
+
+body{
+    margin: 0px;
+    padding: 0%;
+    font-family: 'Source Serif Pro', serif;
+    background-color: #C0C0C0;
+}
+.entire-bar{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    
+}
+#firstbar {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width:15%;
+    height: 1000px;
+    background-color: #A0A0A0;
+    padding: 4px;
+   
+}
+#secondbar {
+    padding: 4px;
+}
+#inputMessage {
+    width: 50%;
+    padding: 10px 5px 10px 5px;
+    border: solid white 2px;
+    border-radius: 3px;
+    background-color: #F0F0F0;
+    margin-left: 30%;
+}
+/* #message-form{
+    margin-right: 0%;
+} */
+.messages {
+    margin-left: 30%;
+}
+#sendMessage{
+    background-color: #404040;
+    display: inline-block;
+    border: solid 2px #404040;
+    border-radius: 3px;
+    padding: 10px 17px 10px 17px;
+    cursor: pointer;
+    color: white;
+}
+#sendMessage:active{
+    background-color: #909090;
+}
+#drawing-img {
+    width:50%;
+    height: 30%;
+    border: solid darkgray 2px;
+    background-color: lightgray;
+}
+#thirdbar {
+   background-color: lightgray;
+   padding: 4px;
+   position: fixed;
+   top: 0%;
+   right: 0%;
+}
+#firstbar p {
+    padding: 5px;
+    font-size: 35px;
+    margin: 0px ;
+    background-color: gray;
+    height: 40px;
+}
+#canvas{
+    display: block;
+    margin: auto;
+
+    cursor:crosshair;
+    margin-top: 7px;
+}
+.drawing-board{
+    width: 600px;
+    height: 610px;
+    margin-bottom: 10px;
+    display: block;
+    margin: auto;
+}
+.finishdrawing-btn{
+    display: inline-block;
+    margin:1px 0px 0px 15px ;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+.text-message {
+    border: solid darkgray 1px;
+    border-radius: 15px;
+    padding: 4px 5px 4px 5px;
+    margin: 3px 0px;
+}
